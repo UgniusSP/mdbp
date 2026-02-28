@@ -1,0 +1,105 @@
+{
+  "orders": [
+    {
+      "productId": "507f1f77bcf86cd799439001",
+      "dealerId": "1",
+      "customerId": "1",
+      "quantity": 1,
+      "totalPrice": 999.99,
+      "status": "delivered",
+      "shippingAddress": "123 Main St, New York, NY 10001",
+      "paymentMethod": "credit_card"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439002",
+      "dealerId": "1",
+      "customerId": "2",
+      "quantity": 2,
+      "totalPrice": 59.98,
+      "status": "shipped",
+      "shippingAddress": "456 Oak Ave, Los Angeles, CA 90001",
+      "paymentMethod": "debit_card"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439003",
+      "dealerId": "2",
+      "customerId": "3",
+      "quantity": 3,
+      "totalPrice": 38.97,
+      "status": "pending",
+      "shippingAddress": "789 Pine Rd, Chicago, IL 60601",
+      "paymentMethod": "paypal"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439004",
+      "dealerId": "2",
+      "customerId": "4",
+      "quantity": 1,
+      "totalPrice": 129.99,
+      "status": "delivered",
+      "shippingAddress": "321 Elm St, Houston, TX 77001",
+      "paymentMethod": "credit_card"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439005",
+      "dealerId": "3",
+      "customerId": "5",
+      "quantity": 1,
+      "totalPrice": 349.99,
+      "status": "processing",
+      "shippingAddress": "654 Maple Dr, Phoenix, AZ 85001",
+      "paymentMethod": "credit_card"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439006",
+      "dealerId": "3",
+      "customerId": "6",
+      "quantity": 2,
+      "totalPrice": 159.98,
+      "status": "delivered",
+      "shippingAddress": "987 Birch Ln, Philadelphia, PA 19101",
+      "paymentMethod": "debit_card"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439007",
+      "dealerId": "4",
+      "customerId": "7",
+      "quantity": 1,
+      "totalPrice": 99.99,
+      "status": "shipped",
+      "shippingAddress": "147 Spruce Ave, San Antonio, TX 78201",
+      "paymentMethod": "paypal"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439008",
+      "dealerId": "4",
+      "customerId": "8",
+      "quantity": 1,
+      "totalPrice": 199.99,
+      "status": "delivered",
+      "shippingAddress": "258 Oak St, San Diego, CA 92101",
+      "paymentMethod": "credit_card"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439009",
+      "dealerId": "5",
+      "customerId": "9",
+      "quantity": 3,
+      "totalPrice": 104.97,
+      "status": "pending",
+      "shippingAddress": "369 Cedar Ln, Dallas, TX 75201",
+      "paymentMethod": "credit_card"
+    },
+    {
+      "productId": "507f1f77bcf86cd799439010",
+      "dealerId": "5",
+      "customerId": "10",
+      "quantity": 2,
+      "totalPrice": 99.98,
+      "status": "delivered",
+      "shippingAddress": "456 Walnut St, San Jose, CA 95101",
+      "paymentMethod": "debit_card"
+    }
+  ]
+}
+

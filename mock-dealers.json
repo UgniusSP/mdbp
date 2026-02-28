@@ -1,0 +1,85 @@
+{
+  "dealers": [
+    {
+      "name": "TechHub Electronics",
+      "email": "contact@techhub.com",
+      "phone": "+1-555-0101",
+      "address": "123 Tech Street",
+      "city": "San Francisco",
+      "country": "USA",
+      "rating": 4.8,
+      "isActive": true
+    },
+    {
+      "name": "Digital Solutions Inc",
+      "email": "sales@digitalsol.com",
+      "phone": "+1-555-0102",
+      "address": "456 Innovation Ave",
+      "city": "New York",
+      "country": "USA",
+      "rating": 4.5,
+      "isActive": true
+    },
+    {
+      "name": "ProTech Traders",
+      "email": "info@protech.com",
+      "phone": "+1-555-0103",
+      "address": "789 Commerce Way",
+      "city": "Los Angeles",
+      "country": "USA",
+      "rating": 4.6,
+      "isActive": true
+    },
+    {
+      "name": "Global Tech Services",
+      "email": "support@globaltech.com",
+      "phone": "+44-555-0104",
+      "address": "321 Business Park",
+      "city": "London",
+      "country": "UK",
+      "rating": 4.7,
+      "isActive": true
+    },
+    {
+      "name": "Euro Electronics",
+      "email": "contact@euroelec.eu",
+      "phone": "+49-555-0105",
+      "address": "654 Tech Complex",
+      "city": "Berlin",
+      "country": "Germany",
+      "rating": 4.4,
+      "isActive": true
+    },
+    {
+      "name": "Asia Tech Imports",
+      "email": "business@asiatech.asia",
+      "phone": "+86-555-0106",
+      "address": "987 Industrial Zone",
+      "city": "Shanghai",
+      "country": "China",
+      "rating": 4.3,
+      "isActive": true
+    },
+    {
+      "name": "Vintage Hardware Store",
+      "email": "old@vintage.com",
+      "phone": "+1-555-0107",
+      "address": "111 Retro Lane",
+      "city": "Boston",
+      "country": "USA",
+      "rating": 3.9,
+      "isActive": false
+    },
+    {
+      "name": "Swift Delivery Tech",
+      "email": "logistics@swifttech.com",
+      "phone": "+61-555-0108",
+      "address": "222 Distribution Hub",
+      "city": "Sydney",
+      "country": "Australia",
+      "rating": 4.6,
+      "isActive": true
+    }
+  ]
+}
+

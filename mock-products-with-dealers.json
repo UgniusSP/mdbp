@@ -1,0 +1,110 @@
+{
+  "productsWithDealers": [
+    {
+      "name": "Laptop",
+      "description": "High-performance laptop with 16GB RAM and 512GB SSD",
+      "price": 999.99,
+      "quantity": 10,
+      "dealerId": "1"
+    },
+    {
+      "name": "Wireless Mouse",
+      "description": "Ergonomic wireless mouse with 2.4GHz connection",
+      "price": 29.99,
+      "quantity": 50,
+      "dealerId": "1"
+    },
+    {
+      "name": "USB-C Cable",
+      "description": "High-speed USB-C charging and data transfer cable",
+      "price": 12.99,
+      "quantity": 100,
+      "dealerId": "2"
+    },
+    {
+      "name": "Mechanical Keyboard",
+      "description": "RGB mechanical keyboard with Cherry MX switches",
+      "price": 129.99,
+      "quantity": 25,
+      "dealerId": "2"
+    },
+    {
+      "name": "Monitor 27 inch",
+      "description": "4K IPS monitor with 144Hz refresh rate",
+      "price": 349.99,
+      "quantity": 15,
+      "dealerId": "3"
+    },
+    {
+      "name": "Webcam HD",
+      "description": "1080p HD webcam with built-in microphone",
+      "price": 79.99,
+      "quantity": 30,
+      "dealerId": "3"
+    },
+    {
+      "name": "External SSD 1TB",
+      "description": "Portable 1TB external solid state drive with USB 3.1",
+      "price": 99.99,
+      "quantity": 20,
+      "dealerId": "4"
+    },
+    {
+      "name": "Headphones",
+      "description": "Noise-cancelling wireless headphones with 30-hour battery",
+      "price": 199.99,
+      "quantity": 18,
+      "dealerId": "4"
+    },
+    {
+      "name": "Laptop Stand",
+      "description": "Adjustable aluminum laptop stand for ergonomic viewing",
+      "price": 34.99,
+      "quantity": 45,
+      "dealerId": "5"
+    },
+    {
+      "name": "Power Bank 20000mAh",
+      "description": "Fast-charging power bank with dual USB ports",
+      "price": 49.99,
+      "quantity": 60,
+      "dealerId": "5"
+    },
+    {
+      "name": "HDMI Cable 2.1",
+      "description": "8K HDMI 2.1 cable with 48Gbps bandwidth",
+      "price": 19.99,
+      "quantity": 75,
+      "dealerId": "6"
+    },
+    {
+      "name": "Router WiFi 6",
+      "description": "High-speed WiFi 6 mesh router with 3000 Mbps",
+      "price": 179.99,
+      "quantity": 12,
+      "dealerId": "6"
+    },
+    {
+      "name": "Gaming Monitor",
+      "description": "27 inch gaming monitor with 240Hz refresh rate",
+      "price": 429.99,
+      "quantity": 8,
+      "dealerId": "1"
+    },
+    {
+      "name": "Docking Station",
+      "description": "USB-C docking station with 10 ports",
+      "price": 89.99,
+      "quantity": 22,
+      "dealerId": "2"
+    },
+    {
+      "name": "Portable Projector",
+      "description": "Compact projector with 1080p resolution",
+      "price": 299.99,
+      "quantity": 6,
+      "dealerId": "8"
+    }
+  ]
+}
+
