@@ -13,16 +13,20 @@ public class Product {
     private String description;
     private BigDecimal price;
     private Integer stockQuantity;
+    private String dealerId;
+    private Dealer dealer;
 
     public Product() {
     }
 
-    public Product(String id, String name, String description, BigDecimal price, Integer stockQuantity) {
+    public Product(String id, String name, String description, BigDecimal price, Integer stockQuantity, String dealerId, Dealer dealer) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.stockQuantity = stockQuantity;
+        this.dealerId = dealerId;
+        this.dealer = dealer;
     }
 
     public String getId() {
@@ -63,6 +67,22 @@ public class Product {
 
     public void setStockQuantity(Integer stockQuantity) {
         this.stockQuantity = stockQuantity;
+    }
+
+    public String getDealerId() {
+        return dealerId;
+    }
+
+    public void setDealerId(String dealerId) {
+        this.dealerId = dealerId;
+    }
+
+    public Dealer getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Dealer dealer) {
+        this.dealer = dealer;
     }
 }
 

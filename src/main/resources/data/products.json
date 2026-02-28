@@ -1,51 +1,115 @@
 [
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c1",
     "name": "Laptop Dell XPS 15",
     "description": "High-performance laptop with 16GB RAM",
     "price": 1299.99,
-    "stockQuantity": 50
+    "stockQuantity": 50,
+    "dealerId": "DEALER_1",
+    "dealer": {
+      "name": "Tech Solutions Inc",
+      "email": "contact@techsolutions.com",
+      "phone": "+1-555-0101",
+      "address": "123 Main St, New York, NY 10001"
+    }
   },
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c2",
     "name": "iPhone 15 Pro",
     "description": "Latest Apple smartphone",
     "price": 999.99,
-    "stockQuantity": 100
+    "stockQuantity": 100,
+    "dealerId": "DEALER_1",
+    "dealer": {
+      "name": "Tech Solutions Inc",
+      "email": "contact@techsolutions.com",
+      "phone": "+1-555-0101",
+      "address": "123 Main St, New York, NY 10001"
+    }
   },
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c3",
     "name": "Samsung 4K TV 55\"",
     "description": "Smart TV with 4K resolution",
     "price": 799.99,
-    "stockQuantity": 30
+    "stockQuantity": 30,
+    "dealerId": "DEALER_2",
+    "dealer": {
+      "name": "Electronics Hub",
+      "email": "info@electronicshub.com",
+      "phone": "+1-555-0102",
+      "address": "456 Market St, San Francisco, CA 94102"
+    }
   },
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c4",
     "name": "Sony WH-1000XM5",
     "description": "Noise-cancelling headphones",
     "price": 399.99,
-    "stockQuantity": 75
+    "stockQuantity": 75,
+    "dealerId": "DEALER_1",
+    "dealer": {
+      "name": "Tech Solutions Inc",
+      "email": "contact@techsolutions.com",
+      "phone": "+1-555-0101",
+      "address": "123 Main St, New York, NY 10001"
+    }
   },
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c5",
     "name": "MacBook Air M3",
     "description": "Lightweight laptop with Apple M3 chip",
     "price": 1199.99,
-    "stockQuantity": 40
+    "stockQuantity": 40,
+    "dealerId": "DEALER_3",
+    "dealer": {
+      "name": "Digital World",
+      "email": "sales@digitalworld.com",
+      "phone": "+1-555-0103",
+      "address": "789 Tech Ave, Austin, TX 78701"
+    }
   },
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c6",
     "name": "iPad Pro 12.9\"",
     "description": "Professional tablet with M2 chip",
     "price": 1099.99,
-    "stockQuantity": 60
+    "stockQuantity": 60,
+    "dealerId": "DEALER_3",
+    "dealer": {
+      "name": "Digital World",
+      "email": "sales@digitalworld.com",
+      "phone": "+1-555-0103",
+      "address": "789 Tech Ave, Austin, TX 78701"
+    }
   },
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c7",
     "name": "Logitech MX Master 3S",
     "description": "Wireless mouse for professionals",
     "price": 99.99,
-    "stockQuantity": 200
+    "stockQuantity": 200,
+    "dealerId": "DEALER_2",
+    "dealer": {
+      "name": "Electronics Hub",
+      "email": "info@electronicshub.com",
+      "phone": "+1-555-0102",
+      "address": "456 Market St, San Francisco, CA 94102"
+    }
   },
   {
+    "id": "65d9f7a1b2c3d4e5f6a7b8c8",
     "name": "Mechanical Keyboard RGB",
     "description": "Gaming keyboard with RGB lighting",
     "price": 149.99,
-    "stockQuantity": 150
+    "stockQuantity": 150,
+    "dealerId": "DEALER_4",
+    "dealer": {
+      "name": "Smart Devices Co",
+      "email": "hello@smartdevices.com",
+      "phone": "+1-555-0104",
+      "address": "321 Innovation Dr, Seattle, WA 98101"
+    }
   }
 ]
 

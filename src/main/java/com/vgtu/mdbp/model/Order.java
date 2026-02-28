@@ -12,7 +12,9 @@ public class Order {
     @Id
     private String id;
     private String dealerId;
+    private Dealer dealer;
     private List<OrderItem> items;
+    private List<Product> products;
     private BigDecimal totalAmount;
     private LocalDateTime orderDate;
     private String status;
@@ -20,10 +22,12 @@ public class Order {
     public Order() {
     }
 
-    public Order(String id, String dealerId, List<OrderItem> items, BigDecimal totalAmount, LocalDateTime orderDate, String status) {
+    public Order(String id, String dealerId, Dealer dealer, List<OrderItem> items, List<Product> products, BigDecimal totalAmount, LocalDateTime orderDate, String status) {
         this.id = id;
         this.dealerId = dealerId;
+        this.dealer = dealer;
         this.items = items;
+        this.products = products;
         this.totalAmount = totalAmount;
         this.orderDate = orderDate;
         this.status = status;
@@ -45,12 +49,28 @@ public class Order {
         this.dealerId = dealerId;
     }
 
+    public Dealer getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Dealer dealer) {
+        this.dealer = dealer;
+    }
+
     public List<OrderItem> getItems() {
         return items;
     }
 
     public void setItems(List<OrderItem> items) {
         this.items = items;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
     }
 
     public BigDecimal getTotalAmount() {
