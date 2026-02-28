@@ -2,7 +2,6 @@ package com.vgtu.mdbp.service;
 
 import com.vgtu.mdbp.model.Order;
 import com.vgtu.mdbp.repository.OrderRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,9 +9,12 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class OrderService {
     private final OrderRepository orderRepository;
+
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
     public Order createOrder(Order order) {
         if (order.getId() == null) {

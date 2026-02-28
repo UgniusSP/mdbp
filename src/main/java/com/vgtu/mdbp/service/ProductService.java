@@ -2,7 +2,6 @@ package com.vgtu.mdbp.service;
 
 import com.vgtu.mdbp.model.Product;
 import com.vgtu.mdbp.repository.ProductRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,9 +9,12 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class ProductService {
     private final ProductRepository productRepository;
+
+    public ProductService(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
     public Product createProduct(Product product) {
         if (product.getId() == null) {

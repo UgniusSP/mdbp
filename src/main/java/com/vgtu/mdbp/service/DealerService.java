@@ -2,7 +2,6 @@ package com.vgtu.mdbp.service;
 
 import com.vgtu.mdbp.model.Dealer;
 import com.vgtu.mdbp.repository.DealerRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,9 +9,12 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class DealerService {
     private final DealerRepository dealerRepository;
+
+    public DealerService(DealerRepository dealerRepository) {
+        this.dealerRepository = dealerRepository;
+    }
 
     public Dealer createDealer(Dealer dealer) {
         if (dealer.getId() == null) {

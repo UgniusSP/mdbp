@@ -2,7 +2,6 @@ package com.vgtu.mdbp.controller;
 
 import com.vgtu.mdbp.model.Dealer;
 import com.vgtu.mdbp.service.DealerService;
-import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,9 +11,12 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/dealers")
-@RequiredArgsConstructor
 public class DealerController {
     private final DealerService dealerService;
+
+    public DealerController(DealerService dealerService) {
+        this.dealerService = dealerService;
+    }
 
     @PostMapping
     public ResponseEntity<Dealer> createDealer(@RequestBody Dealer dealer) {
