@@ -1,254 +1,38 @@
 [
   {
-    "id": "65d9f8a1b2c3d4e5f6a7b8c9",
-    "dealerId": "65d9f6a1b2c3d4e5f6a7b8d1",
-    "dealer": {
-      "id": "65d9f6a1b2c3d4e5f6a7b8d1",
-      "name": "Tech Solutions Inc",
-      "email": "contact@techsolutions.com",
-      "phone": "+1-555-0101",
-      "address": "123 Main St, New York, NY 10001"
-    },
+    "_id": "o9001",
+    "dealerId": "d001",
     "items": [
       {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c1",
-        "productName": "Laptop Dell XPS 15",
-        "quantity": 2,
-        "price": 1299.99
+        "productId": "p1001",
+        "productName": "Oil Filter A1",
+        "unitPrice": 7.99,
+        "quantity": 3
       },
       {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c4",
-        "productName": "Sony WH-1000XM5",
-        "quantity": 3,
-        "price": 399.99
+        "productId": "p1002",
+        "productName": "Brake Pads B2",
+        "unitPrice": 29.5,
+        "quantity": 1
       }
     ],
-    "products": [
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c1",
-        "name": "Laptop Dell XPS 15",
-        "description": "High-performance laptop with 16GB RAM",
-        "price": 1299.99,
-        "stockQuantity": 50
-      },
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c4",
-        "name": "Sony WH-1000XM5",
-        "description": "Noise-cancelling headphones",
-        "price": 399.99,
-        "stockQuantity": 75
-      }
-    ],
-    "totalAmount": 3799.95,
-    "orderDate": "2026-02-23T10:30:00",
-    "status": "COMPLETED"
+    "totalAmount": 53.47,
+    "orderDate": { "$date": "2026-02-20T10:15:00Z" },
+    "status": "PAID"
   },
   {
-    "id": "65d9f8a1b2c3d4e5f6a7b8ca",
-    "dealerId": "65d9f6a1b2c3d4e5f6a7b8d1",
-    "dealer": {
-      "id": "65d9f6a1b2c3d4e5f6a7b8d1",
-      "name": "Tech Solutions Inc",
-      "email": "contact@techsolutions.com",
-      "phone": "+1-555-0101",
-      "address": "123 Main St, New York, NY 10001"
-    },
+    "_id": "o9002",
+    "dealerId": "d002",
     "items": [
       {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c2",
-        "productName": "iPhone 15 Pro",
-        "quantity": 5,
-        "price": 999.99
+        "productId": "p2001",
+        "productName": "Spark Plug S1",
+        "unitPrice": 9.2,
+        "quantity": 4
       }
     ],
-    "products": [
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c2",
-        "name": "iPhone 15 Pro",
-        "description": "Latest Apple smartphone",
-        "price": 999.99,
-        "stockQuantity": 100
-      }
-    ],
-    "totalAmount": 4999.95,
-    "orderDate": "2026-02-25T14:15:00",
-    "status": "PENDING"
-  },
-  {
-    "id": "65d9f8a1b2c3d4e5f6a7b8cb",
-    "dealerId": "65d9f6a1b2c3d4e5f6a7b8d2",
-    "dealer": {
-      "id": "65d9f6a1b2c3d4e5f6a7b8d2",
-      "name": "Electronics Hub",
-      "email": "info@electronicshub.com",
-      "phone": "+1-555-0102",
-      "address": "456 Market St, San Francisco, CA 94102"
-    },
-    "items": [
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c3",
-        "productName": "Samsung 4K TV 55\"",
-        "quantity": 1,
-        "price": 799.99
-      },
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c7",
-        "productName": "Logitech MX Master 3S",
-        "quantity": 10,
-        "price": 99.99
-      }
-    ],
-    "products": [
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c3",
-        "name": "Samsung 4K TV 55\"",
-        "description": "Smart TV with 4K resolution",
-        "price": 799.99,
-        "stockQuantity": 30
-      },
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c7",
-        "name": "Logitech MX Master 3S",
-        "description": "Wireless mouse for professionals",
-        "price": 99.99,
-        "stockQuantity": 200
-      }
-    ],
-    "totalAmount": 1799.89,
-    "orderDate": "2026-02-21T09:45:00",
-    "status": "COMPLETED"
-  },
-  {
-    "id": "65d9f8a1b2c3d4e5f6a7b8cc",
-    "dealerId": "65d9f6a1b2c3d4e5f6a7b8d3",
-    "dealer": {
-      "id": "65d9f6a1b2c3d4e5f6a7b8d3",
-      "name": "Digital World",
-      "email": "sales@digitalworld.com",
-      "phone": "+1-555-0103",
-      "address": "789 Tech Ave, Austin, TX 78701"
-    },
-    "items": [
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c5",
-        "productName": "MacBook Air M3",
-        "quantity": 3,
-        "price": 1199.99
-      },
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c6",
-        "productName": "iPad Pro 12.9\"",
-        "quantity": 2,
-        "price": 1099.99
-      }
-    ],
-    "products": [
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c5",
-        "name": "MacBook Air M3",
-        "description": "Lightweight laptop with Apple M3 chip",
-        "price": 1199.99,
-        "stockQuantity": 40
-      },
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c6",
-        "name": "iPad Pro 12.9\"",
-        "description": "Professional tablet with M2 chip",
-        "price": 1099.99,
-        "stockQuantity": 60
-      }
-    ],
-    "totalAmount": 5799.95,
-    "orderDate": "2026-02-26T16:20:00",
-    "status": "PROCESSING"
-  },
-  {
-    "id": "65d9f8a1b2c3d4e5f6a7b8cd",
-    "dealerId": "65d9f6a1b2c3d4e5f6a7b8d4",
-    "dealer": {
-      "id": "65d9f6a1b2c3d4e5f6a7b8d4",
-      "name": "Smart Devices Co",
-      "email": "hello@smartdevices.com",
-      "phone": "+1-555-0104",
-      "address": "321 Innovation Dr, Seattle, WA 98101"
-    },
-    "items": [
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c8",
-        "productName": "Mechanical Keyboard RGB",
-        "quantity": 8,
-        "price": 149.99
-      }
-    ],
-    "products": [
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c8",
-        "name": "Mechanical Keyboard RGB",
-        "description": "Gaming keyboard with RGB lighting",
-        "price": 149.99,
-        "stockQuantity": 150
-      }
-    ],
-    "totalAmount": 1199.92,
-    "orderDate": "2026-02-27T11:00:00",
-    "status": "PENDING"
-  },
-  {
-    "id": "65d9f8a1b2c3d4e5f6a7b8ce",
-    "dealerId": "65d9f6a1b2c3d4e5f6a7b8d5",
-    "dealer": {
-      "id": "65d9f6a1b2c3d4e5f6a7b8d5",
-      "name": "Global Electronics",
-      "email": "support@globalelectronics.com",
-      "phone": "+1-555-0105",
-      "address": "654 Commerce Blvd, Chicago, IL 60601"
-    },
-    "items": [
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c1",
-        "productName": "Laptop Dell XPS 15",
-        "quantity": 1,
-        "price": 1299.99
-      },
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c2",
-        "productName": "iPhone 15 Pro",
-        "quantity": 2,
-        "price": 999.99
-      },
-      {
-        "productId": "65d9f7a1b2c3d4e5f6a7b8c7",
-        "productName": "Logitech MX Master 3S",
-        "quantity": 5,
-        "price": 99.99
-      }
-    ],
-    "products": [
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c1",
-        "name": "Laptop Dell XPS 15",
-        "description": "High-performance laptop with 16GB RAM",
-        "price": 1299.99,
-        "stockQuantity": 50
-      },
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c2",
-        "name": "iPhone 15 Pro",
-        "description": "Latest Apple smartphone",
-        "price": 999.99,
-        "stockQuantity": 100
-      },
-      {
-        "id": "65d9f7a1b2c3d4e5f6a7b8c7",
-        "name": "Logitech MX Master 3S",
-        "description": "Wireless mouse for professionals",
-        "price": 99.99,
-        "stockQuantity": 200
-      }
-    ],
-    "totalAmount": 3799.92,
-    "orderDate": "2026-02-24T13:30:00",
-    "status": "COMPLETED"
+    "totalAmount": 36.8,
+    "orderDate": { "$date": "2026-02-22T14:40:00Z" },
+    "status": "CREATED"
   }
 ]
-

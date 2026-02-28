@@ -1,41 +1,16 @@
 [
   {
-    "name": "Tech Solutions Inc",
-    "email": "contact@techsolutions.com",
-    "phone": "+1-555-0101",
-    "address": "123 Main St, New York, NY 10001",
-    "orderIds": []
+    "_id": "d001",
+    "name": "Baltic Auto Parts",
+    "email": "sales@balticautoparts.lt",
+    "phone": "+37060011111",
+    "address": "Vilnius, Lithuania"
   },
   {
-    "name": "Electronics Hub",
-    "email": "info@electronicshub.com",
-    "phone": "+1-555-0102",
-    "address": "456 Market St, San Francisco, CA 94102",
-    "orderIds": []
-  },
-  {
-    "name": "Digital World",
-    "email": "sales@digitalworld.com",
-    "phone": "+1-555-0103",
-    "address": "789 Tech Ave, Austin, TX 78701",
-    "orderIds": []
-  },
-  {
-    "name": "Smart Devices Co",
-    "email": "hello@smartdevices.com",
-    "phone": "+1-555-0104",
-    "address": "321 Innovation Dr, Seattle, WA 98101",
-    "orderIds": []
-  },
-  {
-    "name": "Global Electronics",
-    "email": "support@globalelectronics.com",
-    "phone": "+1-555-0105",
-    "address": "654 Commerce Blvd, Chicago, IL 60601",
-    "orderIds": []
+    "_id": "d002",
+    "name": "Kaunas Supplies",
+    "email": "info@kaunassupplies.lt",
+    "phone": "+37060022222",
+    "address": "Kaunas, Lithuania"
   }
 ]
-
-
-
-
