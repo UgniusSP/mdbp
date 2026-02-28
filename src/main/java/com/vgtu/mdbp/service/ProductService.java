@@ -1,5 +1,6 @@
 package com.vgtu.mdbp.service;
 
+import com.vgtu.mdbp.dto.ProductDto;
 import com.vgtu.mdbp.model.Product;
 import com.vgtu.mdbp.repository.ProductRepository;
 import org.springframework.stereotype.Service;
@@ -15,7 +16,15 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public Product createProduct(Product product) {
+    public Product createProduct(ProductDto dto) {
+
+        Product product = new Product();
+        product.setDealerId(dto.getDealerId());
+        product.setName(dto.getName());
+        product.setDescription(dto.getDescription());
+        product.setPrice(dto.getPrice());
+        product.setStockQuantity(dto.getStockQuantity());
+
         return productRepository.save(product);
     }
 
@@ -27,9 +36,18 @@ public class ProductService {
         return productRepository.findById(id);
     }
 
-    public Product updateProduct(String id, Product product) {
-        product.setId(id);
-        return productRepository.save(product);
+    public Product updateProduct(String id, ProductDto dto) {
+
+        Product existingProduct = productRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Product not found"));
+
+        existingProduct.setDealerId(dto.getDealerId());
+        existingProduct.setName(dto.getName());
+        existingProduct.setDescription(dto.getDescription());
+        existingProduct.setPrice(dto.getPrice());
+        existingProduct.setStockQuantity(dto.getStockQuantity());
+
+        return productRepository.save(existingProduct);
     }
 
     public void deleteProduct(String id) {

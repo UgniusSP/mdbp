@@ -1,26 +1,16 @@
-package com.vgtu.mdbp.model;
+package com.vgtu.mdbp.dto;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
+public class DealerDto {
 
-@Document(collection = "dealers")
-public class Dealer {
-
-    @Id
     private String id;
-
     private String name;
-
-    @Indexed(unique = true)
     private String email;
-
     private String phone;
     private String address;
 
-    public Dealer() {}
+    public DealerDto() {}
 
-    public Dealer(String id, String name, String email, String phone, String address) {
+    public DealerDto(String id, String name, String email, String phone, String address) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -28,14 +18,6 @@ public class Dealer {
         this.address = address;
     }
 
-    public Dealer(String name, String email, String phone, String address) {
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-    }
-
-    // getters/setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 

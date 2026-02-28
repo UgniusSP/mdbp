@@ -1,5 +1,6 @@
 package com.vgtu.mdbp.controller;
 
+import com.vgtu.mdbp.dto.DealerDto;
 import com.vgtu.mdbp.model.Dealer;
 import com.vgtu.mdbp.service.DealerService;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class DealerController {
     }
 
     @PostMapping
-    public ResponseEntity<Dealer> createDealer(@RequestBody Dealer dealer) {
+    public ResponseEntity<Dealer> createDealer(@RequestBody DealerDto dealer) {
         return ResponseEntity.status(HttpStatus.CREATED).body(dealerService.createDealer(dealer));
     }
 
@@ -35,7 +36,7 @@ public class DealerController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Dealer> updateDealer(@PathVariable String id, @RequestBody Dealer dealer) {
+    public ResponseEntity<Dealer> updateDealer(@PathVariable String id, @RequestBody DealerDto dealer) {
         return ResponseEntity.ok(dealerService.updateDealer(id, dealer));
     }
 

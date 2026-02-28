@@ -6,5 +6,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DealerRepository extends MongoRepository<Dealer, String> {
+    Dealer getDealerById(String id);
 }
 

@@ -1,5 +1,6 @@
 package com.vgtu.mdbp.controller;
 
+import com.vgtu.mdbp.dto.OrderDto;
 import com.vgtu.mdbp.model.Order;
 import com.vgtu.mdbp.service.OrderService;
 import org.springframework.http.HttpStatus;
@@ -18,8 +19,8 @@ public class OrderController {
     }
 
     @PostMapping
-    public ResponseEntity<Order> createOrder(@RequestBody Order order) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.createOrder(order));
+    public ResponseEntity<Order> createOrder(@RequestBody OrderDto orderDto) {
+        return ResponseEntity.status(HttpStatus.CREATED).body(orderService.createOrder(orderDto));
     }
 
     @GetMapping
@@ -40,7 +41,7 @@ public class OrderController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Order> updateOrder(@PathVariable String id, @RequestBody Order order) {
+    public ResponseEntity<Order> updateOrder(@PathVariable String id, @RequestBody OrderDto order) {
         return ResponseEntity.ok(orderService.updateOrder(id, order));
     }
 

@@ -1,6 +1,5 @@
 spring:
   application:
     name: mdbp
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/mdbp
+  mongodb:
+    uri: mongodb://localhost:27017/shop

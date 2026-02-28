@@ -1,5 +1,6 @@
 package com.vgtu.mdbp.service;
 
+import com.vgtu.mdbp.dto.OrderDto;
 import com.vgtu.mdbp.model.Order;
 import com.vgtu.mdbp.repository.OrderRepository;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,26 @@ public class OrderService {
         this.orderRepository = orderRepository;
     }
 
-    public Order createOrder(Order order) {
-        return orderRepository.save(order);
+    public Order createOrder(OrderDto orderDto) {
+
+        List<Order.OrderItem> orderItems = orderDto.getItems()
+                .stream()
+                .map(itemDto -> new Order.OrderItem(
+                        itemDto.getProductId(),
+                        itemDto.getProductName(),
+                        itemDto.getUnitPrice(),
+                        itemDto.getQuantity()
+                ))
+                .toList();
+
+        Order orderEntity = new Order(
+                orderDto.getDealerId(),
+                orderItems,
+                orderDto.getTotalAmount(),
+                orderDto.getStatus()
+        );
+
+        return orderRepository.save(orderEntity);
     }
 
     public List<Order> getAllOrders() {
@@ -31,9 +50,26 @@ public class OrderService {
         return orderRepository.findByDealerId(dealerId);
     }
 
-    public Order updateOrder(String id, Order order) {
-        order.setId(id);
-        return orderRepository.save(order);
+    public Order updateOrder(String id, OrderDto orderDto) {
+
+        Order existingOrder = orderRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Order not found"));
+
+        List<Order.OrderItem> updatedItems = orderDto.getItems()
+                .stream()
+                .map(itemDto -> new Order.OrderItem(
+                        itemDto.getProductId(),
+                        itemDto.getProductName(),
+                        itemDto.getUnitPrice(),
+                        itemDto.getQuantity()
+                ))
+                .toList();
+
+        existingOrder.setItems(updatedItems);
+        existingOrder.setTotalAmount(orderDto.getTotalAmount());
+        existingOrder.setStatus(orderDto.getStatus());
+
+        return orderRepository.save(existingOrder);
     }
 
     public void deleteOrder(String id) {

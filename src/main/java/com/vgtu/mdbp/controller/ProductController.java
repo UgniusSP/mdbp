@@ -1,5 +1,6 @@
 package com.vgtu.mdbp.controller;
 
+import com.vgtu.mdbp.dto.ProductDto;
 import com.vgtu.mdbp.model.Product;
 import com.vgtu.mdbp.service.ProductService;
 import org.springframework.http.HttpStatus;
@@ -18,7 +19,7 @@ public class ProductController {
     }
 
     @PostMapping
-    public ResponseEntity<Product> createProduct(@RequestBody Product product) {
+    public ResponseEntity<Product> createProduct(@RequestBody ProductDto product) {
         return ResponseEntity.status(HttpStatus.CREATED).body(productService.createProduct(product));
     }
 
@@ -35,7 +36,7 @@ public class ProductController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Product> updateProduct(@PathVariable String id, @RequestBody Product product) {
+    public ResponseEntity<Product> updateProduct(@PathVariable String id, @RequestBody ProductDto product) {
         return ResponseEntity.ok(productService.updateProduct(id, product));
     }
 

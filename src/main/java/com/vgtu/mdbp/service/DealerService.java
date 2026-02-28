@@ -1,5 +1,6 @@
 package com.vgtu.mdbp.service;
 
+import com.vgtu.mdbp.dto.DealerDto;
 import com.vgtu.mdbp.model.Dealer;
 import com.vgtu.mdbp.repository.DealerRepository;
 import org.springframework.stereotype.Service;
@@ -15,8 +16,14 @@ public class DealerService {
         this.dealerRepository = dealerRepository;
     }
 
-    public Dealer createDealer(Dealer dealer) {
-        return dealerRepository.save(dealer);
+    public Dealer createDealer(DealerDto dealer) {
+        Dealer newDealer = new Dealer(
+                dealer.getName(),
+                dealer.getEmail(),
+                dealer.getPhone(),
+                dealer.getAddress()
+        );
+        return dealerRepository.save(newDealer);
     }
 
     public List<Dealer> getAllDealers() {
@@ -27,8 +34,12 @@ public class DealerService {
         return dealerRepository.findById(id);
     }
 
-    public Dealer updateDealer(String id, Dealer dealer) {
-        dealer.setId(id);
+    public Dealer updateDealer(String id, DealerDto dealerDto) {
+        Dealer dealer = dealerRepository.getDealerById(id);
+        dealer.setName(dealerDto.getName());
+        dealer.setEmail(dealerDto.getEmail());
+        dealer.setPhone(dealerDto.getPhone());
+        dealer.setAddress(dealerDto.getAddress());
         return dealerRepository.save(dealer);
     }
 

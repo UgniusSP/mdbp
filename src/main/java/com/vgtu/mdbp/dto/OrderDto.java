@@ -1,54 +1,36 @@
-package com.vgtu.mdbp.model;
+package com.vgtu.mdbp.dto;
 
 import com.vgtu.mdbp.enums.OrderStatus;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-@Document(collection = "orders")
-public class Order {
-    @Id
-    private String id;
-    @Indexed
+public class OrderDto {
     private String dealerId;
-    private List<OrderItem> items = new ArrayList<>();
+    private List<OrderItemDto> items;
     private BigDecimal totalAmount;
-    private Instant orderDate;
     private OrderStatus status;
 
-    public Order() {}
+    public OrderDto() {}
 
-    public Order(String id, String dealerId, List<OrderItem> items, BigDecimal totalAmount, OrderStatus status) {
-        this.id = id;
+    public OrderDto(String dealerId, List<OrderItemDto> items, BigDecimal totalAmount, OrderStatus status) {
         this.dealerId = dealerId;
         this.items = items;
         this.totalAmount = totalAmount;
-        this.orderDate = Instant.now();
         this.status = status;
     }
 
-    public Order(String dealerId, List<OrderItem> items, BigDecimal totalAmount, OrderStatus status) {
-        this.dealerId = dealerId;
-        this.items = items;
-        this.totalAmount = totalAmount;
-        this.orderDate = Instant.now();
-        this.status = status;
-    }
-
-    public static class OrderItem {
+    public static class OrderItemDto {
         private String productId;
         private String productName;
         private BigDecimal unitPrice;
         private Integer quantity;
 
-        public OrderItem() {}
+        public OrderItemDto() {}
 
-        public OrderItem(String productId, String productName, BigDecimal unitPrice, Integer quantity) {
+        public OrderItemDto(String productId, String productName, BigDecimal unitPrice, Integer quantity) {
             this.productId = productId;
             this.productName = productName;
             this.unitPrice = unitPrice;
@@ -68,20 +50,14 @@ public class Order {
         public void setQuantity(Integer quantity) { this.quantity = quantity; }
     }
 
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
-
     public String getDealerId() { return dealerId; }
     public void setDealerId(String dealerId) { this.dealerId = dealerId; }
 
-    public List<OrderItem> getItems() { return items; }
-    public void setItems(List<OrderItem> items) { this.items = items; }
+    public List<OrderItemDto> getItems() { return items; }
+    public void setItems(List<OrderItemDto> items) { this.items = items; }
 
     public BigDecimal getTotalAmount() { return totalAmount; }
     public void setTotalAmount(BigDecimal totalAmount) { this.totalAmount = totalAmount; }
-
-    public Instant getOrderDate() { return orderDate; }
-    public void setOrderDate(Instant orderDate) { this.orderDate = orderDate; }
 
     public OrderStatus getStatus() { return status; }
     public void setStatus(OrderStatus status) { this.status = status; }
