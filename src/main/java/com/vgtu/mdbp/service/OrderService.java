@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.UUID;
 
 @Service
 public class OrderService {
@@ -17,9 +16,6 @@ public class OrderService {
     }
 
     public Order createOrder(Order order) {
-        if (order.getId() == null) {
-            order.setId(UUID.randomUUID());
-        }
         return orderRepository.save(order);
     }
 
@@ -27,20 +23,20 @@ public class OrderService {
         return orderRepository.findAll();
     }
 
-    public Optional<Order> getOrderById(UUID id) {
+    public Optional<Order> getOrderById(String id) {
         return orderRepository.findById(id);
     }
 
-    public List<Order> getOrdersByDealerId(UUID dealerId) {
+    public List<Order> getOrdersByDealerId(String dealerId) {
         return orderRepository.findByDealerId(dealerId);
     }
 
-    public Order updateOrder(UUID id, Order order) {
+    public Order updateOrder(String id, Order order) {
         order.setId(id);
         return orderRepository.save(order);
     }
 
-    public void deleteOrder(UUID id) {
+    public void deleteOrder(String id) {
         orderRepository.deleteById(id);
     }
 }

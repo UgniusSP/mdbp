@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/dealers")
@@ -29,19 +28,19 @@ public class DealerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Dealer> getDealerById(@PathVariable UUID id) {
+    public ResponseEntity<Dealer> getDealerById(@PathVariable String id) {
         return dealerService.getDealerById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Dealer> updateDealer(@PathVariable UUID id, @RequestBody Dealer dealer) {
+    public ResponseEntity<Dealer> updateDealer(@PathVariable String id, @RequestBody Dealer dealer) {
         return ResponseEntity.ok(dealerService.updateDealer(id, dealer));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteDealer(@PathVariable UUID id) {
+    public ResponseEntity<Void> deleteDealer(@PathVariable String id) {
         dealerService.deleteDealer(id);
         return ResponseEntity.noContent().build();
     }

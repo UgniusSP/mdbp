@@ -6,13 +6,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.UUID;
 
 @Document(collection = "orders")
 public class Order {
     @Id
-    private UUID id;
-    private UUID dealerId;
+    private String id;
+    private String dealerId;
     private List<OrderItem> items;
     private BigDecimal totalAmount;
     private LocalDateTime orderDate;
@@ -21,7 +20,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(UUID id, UUID dealerId, List<OrderItem> items, BigDecimal totalAmount, LocalDateTime orderDate, String status) {
+    public Order(String id, String dealerId, List<OrderItem> items, BigDecimal totalAmount, LocalDateTime orderDate, String status) {
         this.id = id;
         this.dealerId = dealerId;
         this.items = items;
@@ -30,19 +29,19 @@ public class Order {
         this.status = status;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public UUID getDealerId() {
+    public String getDealerId() {
         return dealerId;
     }
 
-    public void setDealerId(UUID dealerId) {
+    public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
 
@@ -79,7 +78,7 @@ public class Order {
     }
 
     public static class OrderItem {
-        private UUID productId;
+        private String productId;
         private String productName;
         private Integer quantity;
         private BigDecimal price;
@@ -87,18 +86,18 @@ public class Order {
         public OrderItem() {
         }
 
-        public OrderItem(UUID productId, String productName, Integer quantity, BigDecimal price) {
+        public OrderItem(String productId, String productName, Integer quantity, BigDecimal price) {
             this.productId = productId;
             this.productName = productName;
             this.quantity = quantity;
             this.price = price;
         }
 
-        public UUID getProductId() {
+        public String getProductId() {
             return productId;
         }
 
-        public void setProductId(UUID productId) {
+        public void setProductId(String productId) {
             this.productId = productId;
         }
 

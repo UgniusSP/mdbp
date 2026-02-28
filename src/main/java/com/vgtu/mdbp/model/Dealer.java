@@ -4,22 +4,21 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
-import java.util.UUID;
 
 @Document(collection = "dealers")
 public class Dealer {
     @Id
-    private UUID id;
+    private String id;
     private String name;
     private String email;
     private String phone;
     private String address;
-    private List<UUID> orderIds;
+    private List<String> orderIds;
 
     public Dealer() {
     }
 
-    public Dealer(UUID id, String name, String email, String phone, String address, List<UUID> orderIds) {
+    public Dealer(String id, String name, String email, String phone, String address, List<String> orderIds) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -28,11 +27,11 @@ public class Dealer {
         this.orderIds = orderIds;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -68,11 +67,11 @@ public class Dealer {
         this.address = address;
     }
 
-    public List<UUID> getOrderIds() {
+    public List<String> getOrderIds() {
         return orderIds;
     }
 
-    public void setOrderIds(List<UUID> orderIds) {
+    public void setOrderIds(List<String> orderIds) {
         this.orderIds = orderIds;
     }
 }
