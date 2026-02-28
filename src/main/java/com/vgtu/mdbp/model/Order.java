@@ -6,7 +6,10 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.UUID;
 
 @Document(collection = "orders")
 @Data
@@ -14,16 +17,21 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class Order {
     @Id
-    private String id;
-    private String productId;
-    private String dealerId;
-    private String customerId;
-    private Integer quantity;
-    private Double totalPrice;
-    private String status;
+    private UUID id;
+    private UUID dealerId;
+    private List<OrderItem> items;
+    private BigDecimal totalAmount;
     private LocalDateTime orderDate;
-    private LocalDateTime deliveryDate;
-    private String shippingAddress;
-    private String paymentMethod;
+    private String status;
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class OrderItem {
+        private UUID productId;
+        private String productName;
+        private Integer quantity;
+        private BigDecimal price;
+    }
 }
 

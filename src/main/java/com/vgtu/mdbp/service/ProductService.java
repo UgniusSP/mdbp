@@ -7,14 +7,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
 public class ProductService {
-
     private final ProductRepository productRepository;
 
     public Product createProduct(Product product) {
+        if (product.getId() == null) {
+            product.setId(UUID.randomUUID());
+        }
         return productRepository.save(product);
     }
 
@@ -22,49 +25,17 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public Optional<Product> getProductById(String id) {
+    public Optional<Product> getProductById(UUID id) {
         return productRepository.findById(id);
     }
 
-    public List<Product> getProductsByName(String name) {
-        return productRepository.findByName(name);
+    public Product updateProduct(UUID id, Product product) {
+        product.setId(id);
+        return productRepository.save(product);
     }
 
-    public List<Product> getProductsByDealer(String dealerId) {
-        return productRepository.findByDealerId(dealerId);
-    }
-
-    public List<Product> getProductsByNameAndDealer(String name, String dealerId) {
-        return productRepository.findByNameAndDealerId(name, dealerId);
-    }
-
-    public Product updateProduct(String id, Product product) {
-        if (productRepository.existsById(id)) {
-            product.setId(id);
-            return productRepository.save(product);
-        }
-        return null;
-    }
-
-    public boolean deleteProduct(String id) {
-        if (productRepository.existsById(id)) {
-            productRepository.deleteById(id);
-            return true;
-        }
-        return false;
-    }
-
-    public void deleteAllProducts() {
-        productRepository.deleteAll();
-    }
-
-    public Double getAveragePrice(String dealerId) {
-        return productRepository.findByDealerId(dealerId)
-                .stream()
-                .mapToDouble(Product::getPrice)
-                .average()
-                .orElse(0.0);
+    public void deleteProduct(UUID id) {
+        productRepository.deleteById(id);
     }
 }
-
 

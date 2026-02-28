@@ -6,17 +6,19 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
+import java.util.UUID;
+
 @Document(collection = "products")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
     @Id
-    private String id;
+    private UUID id;
     private String name;
     private String description;
-    private Double price;
-    private Integer quantity;
-    private String dealerId;
+    private BigDecimal price;
+    private Integer stockQuantity;
 }
 
